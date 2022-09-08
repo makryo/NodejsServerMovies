@@ -16,6 +16,9 @@ mongoose.connect(
 
 app.use(rutas);
 
-app.listen(3000, () => {
+const host = '0.0.0.0';
+const port = process.env.port || 3000;
+
+app.listen(port, host, () => {
     console.log("Esta corriendo");
 });
