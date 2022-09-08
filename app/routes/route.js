@@ -2,6 +2,10 @@ const express = require("express");
 const UserModel = require("../models/model");
 const app = express();
 
+app.get("/", (request, response) => {
+    response.send("Api rest movies");
+});
+
 app.get("/users", async (request, response) => {
     const users = await UserModel.find({});
 
